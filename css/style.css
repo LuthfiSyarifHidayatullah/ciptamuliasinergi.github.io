@@ -7,6 +7,10 @@
     --dark: #011A41;
 }
 
+body {
+    padding-top: 146px;
+}
+
 .back-to-top {
     position: fixed;
     display: none;
