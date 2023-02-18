@@ -88,7 +88,7 @@
         autoplay: true,
         smartSpeed: 1500,
         items: 1,
-        dots: true,
+        dots: false,
         loop: true,
         nav : true,
         navText : [
