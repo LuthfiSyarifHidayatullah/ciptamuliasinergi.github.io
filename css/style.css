@@ -8,7 +8,7 @@
 }
 
 body {
-    padding-top: 144px;
+    padding-top: 50px;
 }
 
 .back-to-top {
@@ -162,69 +162,126 @@ h6,
     }
 }
 
-
 /*** Header ***/
-.carousel-caption {
+
+.owl-carousel {
+    padding-top: 75px;
+}
+
+.header-carousel .carousel-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: start;
-    z-index: 1;
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-    width: 3rem;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    width: 3rem;
-    height: 3rem;
-    background-color: var(--primary);
-    border: 10px solid var(--primary);
-}
-
-.carousel-control-prev-icon {
-    border-radius: 0 3rem 3rem 0;
-}
-
-.carousel-control-next-icon {
-    border-radius: 3rem 0 0 3rem;
+    background: rgba(22, 22, 22, .7);
 }
 
 @media (max-width: 768px) {
-    #header-carousel .carousel-item {
+    .header-carousel .owl-carousel-item {
         position: relative;
-        min-height: 450px;
+        min-height: 500px;
     }
     
-    #header-carousel .carousel-item img {
+    .header-carousel .owl-carousel-item img {
         position: absolute;
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
+
+    .header-carousel .owl-carousel-item h5,
+    .header-carousel .owl-carousel-item p {
+        font-size: 14px !important;
+        font-weight: 400 !important;
+    }
+
+    .header-carousel .owl-carousel-item h1 {
+        font-size: 30px;
+        font-weight: 600;
+    }
+}
+
+.header-carousel .owl-nav {
+    position: absolute;
+    width: 200px;
+    height: 45px;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-carousel .owl-nav .owl-prev,
+.header-carousel .owl-nav .owl-next {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    background: transparent;
+    border: 1px solid #FFFFFF;
+    border-radius: 45px;
+    font-size: 22px;
+    transition: .5s;
+}
+
+.header-carousel .owl-nav .owl-prev:hover,
+.header-carousel .owl-nav .owl-next:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+.header-carousel .owl-dots {
+    position: absolute;
+    height: 45px;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-carousel .owl-dot {
+    position: relative;
+    display: inline-block;
+    margin: 0 5px;
+    width: 15px;
+    height: 15px;
+    background: transparent;
+    border: 1px solid #FFFFFF;
+    border-radius: 15px;
+    transition: .5s;
+}
+
+.header-carousel .owl-dot::after {
+    position: absolute;
+    content: "";
+    width: 5px;
+    height: 5px;
+    top: 4px;
+    left: 4px;
+    background: #FFFFFF;
+    border-radius: 5px;
+}
+
+.header-carousel .owl-dot.active {
+    background: var(--primary);
+    border-color: var(--primary);
 }
 
 .page-header {
-    padding-top: 12rem;
-    padding-bottom: 6rem;
-    background: url(../img/header.jpg) top left no-repeat;
+    background: linear-gradient(rgba(22, 22, 22, .7), rgba(22, 22, 22, .7)), url(../img/carousel-1.jpg) center center no-repeat;
     background-size: cover;
 }
 
-.page-header .breadcrumb-item,
-.page-header .breadcrumb-item a {
-    font-weight: 500;
-}
-
-.page-header .breadcrumb-item+.breadcrumb-item::before {
-    color: var(--tertiary);
+.breadcrumb-item + .breadcrumb-item::before {
+    color: var(--light);
 }
 
 
@@ -270,11 +327,17 @@ h6,
 /*** Service ***/
 .service .nav .nav-link {
     transition: .5s;
+    border: none;
+}
+
+.services {
+    margin:auto;
 }
 
 .service .nav .nav-link.active {
     border-color: var(--primary) !important;
     background: var(--primary);
+    
 }
 
 .service .nav .nav-link.active h5 {
@@ -285,6 +348,48 @@ h6,
     color: #FFFFFF !important;
 }
 
+/* contact */
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  td:first-child {
+    width: 40px;
+    text-align: center;
+  }
+  
+  i {
+    font-size: 20px;
+  }
+
+
+/*** Produk ***/
+.img-twice::before {
+    position: absolute;
+    content: "";
+    width: 60%;
+    height: 80%;
+    top: 10%;
+    left: 20%;
+    background: var(--primary);
+    border: 25px solid var(--light);
+    border-radius: 6px;
+    z-index: -1;
+}
+
+.container-xxl {
+    padding-top: 34px;
+}
+
+.product-title {
+    color: #FFFFFF;
+}
 
 /*** Project ***/
 .project-item,
