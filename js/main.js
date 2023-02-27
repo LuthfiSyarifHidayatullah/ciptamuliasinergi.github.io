@@ -32,6 +32,9 @@
             }
         }
     });
+
+    // switch img product detail
+   
     
     
     // Back to top button
